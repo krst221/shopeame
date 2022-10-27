@@ -1,1 +1,389 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@font-face {
+  font-family: Display;
+  src: url(./assets/fonts/red-hat/RedHatDisplay-Medium.otf);
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(./assets/fonts/inter/Inter-Medium.otf);
+}
+
+ngb-rating {
+  color: #FFC107;
+  padding: 0;
+  font-size: 20px;
+  margin: 0px 10px;
+  position: relative;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.active {
+  position: absolute;
+  top: 0;
+  border-radius: 10px;
+  padding-top: 4px;
+  background-color: rgba(255, 235, 250, 0.3);
+  width: 100px;
+  height: 56px;
+
+  p {
+    color: #00579F;
+  }
+
+  .picture1 {
+    display: none;
+  }
+
+  .picture2 {
+    display: inline-block;
+  }
+}
+
+.picture1 {
+  display: inline-block;
+}
+
+.picture2 {
+  display: none;
+}
+
+.c-header {
+  max-height: 172px;
+  width: 100%;
+
+  &--bar {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--menu {
+    background-color: #FFC970;
+    justify-content: center;
+    align-items: center;
+
+    &--tabs {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.c-tab {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 10px;
+  align-items: center;
+  cursor: pointer;
+  margin: 8px 0px;
+  padding: 4px 0px;
+  width: 100px;
+  height: 56px;
+
+  img {
+    width: 20px;
+    height: 20px;
+    padding-top: 4px;
+
+  }
+
+  p {
+    font-size: 14px;
+    font-family: Inter;
+    line-height: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #333333;
+  }
+
+  a:hover {
+    color: #333333;
+  }
+
+}
+
+.c-biglogo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p, h2 {
+    font-weight: 500;
+    font-family: Display;
+    font-size: 36px;
+    line-height: 36px;
+    color: #0C2146;
+  }
+
+  h2 {
+    padding-top: 8px;
+  }
+
+  &--logo {
+    width: 40px;
+    height: 40px;
+    background-image: url(./assets/img/logo.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 2px;
+    margin: 10px;
+
+    p {
+      font-family: Display;
+      font-size: 32px;
+      line-height: 36px;
+      font-weight: 700;
+      color: white;
+    }
+  }
+}
+
+.c-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  background-color: #333333;
+
+  h4, span {
+    color: white;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    margin: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
+
+.c-home {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 4% 0px;
+  min-height: 53.8vh;
+}
+
+.c-textblock {
+  font-family: Inter;
+  margin: 10px;
+  max-width: 1000px;
+
+  h2 {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    margin: 10px 0px;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+.left {
+  text-align: left;
+}
+
+.c-grid {
+  font-family: Inter;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  background-color: #CCCCCC;
+  flex-wrap: wrap;
+  padding: 50px;
+  min-height: 69.6vh;
+
+  &--items {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  &--buttons {
+    display: flex;
+    justify-content: center;
+
+    button {
+      margin: 0px 10px;
+      font-size: 10px;
+      padding: 4px;
+      width: 60px;
+    }
+  }
+}
+
+.c-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 250px;
+  margin: 10px;
+
+  img {
+    height: 54px;
+    max-width: 60px;
+    margin: 6px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 14px;
+    text-align: center;
+    height: 150px;
+    align-items: center;
+    display: flex;
+  }
+
+  &--edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}
+
+.c-form {
+  padding: 0px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  p {
+    margin: 6px 0px;
+  }
+
+  input[type=text] {
+    font-weight: 400;
+    font-size: 14px;
+    border-radius: 4px;
+    width: 518px;
+    height: 36px;
+    padding: 4px;
+  }
+
+  div {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.c-button {
+  align-items: flex-end;
+  padding-top: 20px;
+
+  button {
+    width: 150px;
+    height: 32px;
+    border: 1px solid #F89F21;
+    background-color: #F89F21;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500px;
+    line-height: 20px;
+  }
+}
+
+.c-editgrid {
+  font-family: Inter;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  background-color: #CCCCCC;
+  padding: 50px;
+  min-height: 69.6vh;
+
+  &--items {
+    padding: 20px 50px 50px 50px;
+    background-color: white;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+
+    h1 {
+      font-size: 24px;
+      line-height: 36px;
+      font-weight: 700;
+      margin: 10px 40px;
+    }
+
+    &--product {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+    }
+  }
+}
+
+.c-border {
+  width: 1px;
+  height: 434px;
+  background-color: #F89F21;
+  margin: 0px 60px;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
