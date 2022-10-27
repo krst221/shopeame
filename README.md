@@ -4,7 +4,7 @@
 
 Pequeña aplicación de una tienda de productos realizada en Angular y utilizando TypeScript. 
 
-Incluye lazy routing, servicios, endpoints, componentes, peticiones CRUD a una API externa y funcionalidad total.
+Incluye lazy routing, servicios, endpoints, componentes, modelos, peticiones CRUD a una API externa y funcionalidad total.
 
 ## Descripción general
 
