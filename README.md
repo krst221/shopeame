@@ -2,7 +2,9 @@
 
 ## Concepto principal
 
-Pequeña aplicación de una tienda de productos realizada en Angular. Incluye lazy routing, servicios, endpoints, componentes, peticiones CRUD a una API externa y funcionalidad total.
+Pequeña aplicación de una tienda de productos realizada en Angular y utilizando TypeScript. 
+
+Incluye lazy routing, servicios, endpoints, componentes, peticiones CRUD a una API externa y funcionalidad total.
 
 ## Descripción general
 
