@@ -10,9 +10,9 @@ Incluye lazy routing, servicios, endpoints, componentes, modelos, peticiones CRU
 
 ### Header
 
-Elemento fijo en todos los endpoints del proyecto.
+Elemento fijo.
 
-Incluye el título de la página junto con su logo y un pequeño nav abajo con los diferentes endpoints de la página, cambiando cada botón de color dependiendo de la página en la página en la que te encuentres.
+Incluye el título de la página junto con su logo y un pequeño nav abajo con los diferentes endpoints del proyecto, cambiando cada botón de color dependiendo de la página en la página en la que te encuentres.
 
 ### Body
 
@@ -52,6 +52,6 @@ Simplemente introduces los campos pertinentes, bajo ciertas condiciones (todos l
 
 ### Footer
 
-Elemento fijo en todos los endpoints del proyecto.
+Elemento fijo.
 
 Muestra unos enlaces a ciertas RRSS de interés, junto al copyright, el nombre de la página y el año (dinámico). Tiene un tamaño fijo, y si los elementos del body no son demasiado grandes siempre aparecerá anclado abajo del todo, como por ejemplo si eliminamos unos pocos productos.
