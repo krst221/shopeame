@@ -22,7 +22,7 @@ Aquí se imprimirá el contenido de cada endpoint.
 
 Sirve de introducción a la página, unos párrafos con texto aleatorio y unos headings.
 
-#### Products
+#### Productos
 
 Aquí se pueden encontrar todos los productos disponibles en la API remota. Cada producto consta de:
 
