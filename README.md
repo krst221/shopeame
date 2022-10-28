@@ -1,27 +1,57 @@
 # Shopeame
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+## Concepto principal
 
-## Development server
+Pequeña aplicación de una tienda de productos realizada en Angular y utilizando TypeScript. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Incluye lazy routing, servicios, endpoints, componentes, modelos, peticiones CRUD a una API externa y funcionalidad total.
 
-## Code scaffolding
+## Descripción general
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Header
 
-## Build
+Elemento fijo.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Incluye el título de la página junto con su logo y un pequeño nav abajo con los diferentes endpoints del proyecto, cambiando cada botón de color dependiendo de la página en la página en la que te encuentres.
 
-## Running unit tests
+### Body
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Aquí se imprimirá el contenido de cada endpoint.
 
-## Running end-to-end tests
+#### Home
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Sirve de introducción a la página, unos párrafos con texto aleatorio y unos headings.
 
-## Further help
+#### Productos
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Aquí se pueden encontrar todos los productos disponibles en la API remota. Cada producto consta de:
+
+- Imágen de tamaño fijo.
+- Título.
+- Precio en €.
+- Descripción del producto.
+- Rating en estrellas, entre 0 y 5.
+
+También se incluyen dos botones, uno de editar y otro de eliminar.
+
+##### Editar
+
+Te redirige a la página de gestión y allí podrás editar todos los campos que quieras, y volver a enviar el producto habiendo pasado las validaciones pertinentes. Dichos cambiós se guardarán en la API y se volverán a mostrar los productos con dichas modificaciones.
+
+##### Eliminar
+
+Elimina directamente el producto seleccionado, y muestra automaticamente los productos resultantes.
+
+#### Gestión
+
+Aquí disponemos de un formulario y una vista previa del objeto, que nos sirve tanto para la creación como la edición de productos.
+
+##### Crear producto
+
+Simplemente introduces los campos pertinentes, bajo ciertas condiciones (todos los campos son requeridos, el precio ha de ser numérico y el rating ha de estar comprendido entre 0 y 5 estrellas). Una vez creado el producto, este se añade a la API y se te redireccionará a la página de productos, donde puedes ves la lista actualizada de productos.
+
+### Footer
+
+Elemento fijo.
+
+Muestra unos enlaces a ciertas RRSS de interés, junto al copyright, el nombre de la página y el año (dinámico). Tiene un tamaño fijo, y si los elementos del body no son demasiado grandes siempre aparecerá anclado abajo del todo, como por ejemplo si eliminamos unos pocos productos.
