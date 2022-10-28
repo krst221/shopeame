@@ -1,7 +1,6 @@
 import { product } from './../models/product.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Form } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
