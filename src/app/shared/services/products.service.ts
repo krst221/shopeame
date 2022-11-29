@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 
 export class ProductsService {
 
-  url: string = 'http://localhost:3000/products';
+  url: string = 'https://shopeame-backend.vercel.app/products';
 
   product: product = {
     id: '',
