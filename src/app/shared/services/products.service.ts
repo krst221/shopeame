@@ -14,7 +14,7 @@ export class ProductsService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   }
 
-  private url = 'localhost:3000/products';
+  private url = 'http://localhost:3000/products';
 
   private handleError<T>(operation = 'operation', result?: T){
     return (error: any): Observable<T> => {
