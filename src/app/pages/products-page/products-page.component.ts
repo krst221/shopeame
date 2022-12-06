@@ -10,27 +10,27 @@ import { ProductsService } from 'src/app/shared/services/products.service';
 })
 export class ProductsPageComponent implements OnInit {
 
-  products?: product[];
+  products: product[] = [];
 
   constructor(private productsService: ProductsService, private router: Router) { }
 
-  edit(id: string){
+  edit(id: string): void {
     this.productsService.getProductById(id).subscribe((res: any) => {
       this.productsService.product = res;
       this.router.navigate(['/edit']);
     });
   }
 
-  delete(id: string) {
-    this.productsService.deleteProduct(id).subscribe((res: any) => {
-      this.ngOnInit();
-    });
+  delete(product: product): void {
+    this.productsService.deleteProduct(product.id).subscribe();
+    this.products = this.products.filter(p => p !== product);
   }
 
   ngOnInit(): void {
-    this.productsService.getProducts().subscribe((res: any) => {
-      this.products = res;
-    })
-  }
+    this.productsService.getProducts().subscribe((products) => {
+      this.productsService.products = products;
+      this.products = products;}
+    );
 
+  }
 }

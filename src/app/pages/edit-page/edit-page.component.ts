@@ -31,7 +31,10 @@ export class EditPageComponent implements OnInit {
           stars: this.productRegisterForm.get('stars')?.value,
           image: this.productRegisterForm.get('image')?.value,
         }
-        this.productsService.addProduct(newproduct).subscribe();
+        this.productsService.addProduct(newproduct).subscribe(product => {
+          console.log(product);
+          this.productsService.products.push(product);
+        });
       }
 
       else {
@@ -64,7 +67,7 @@ export class EditPageComponent implements OnInit {
     })
     this.productsService.product.id = '';
     this.productsService.product.name = '';
-    this.productsService.product.price = '';
+    this.productsService.product.price = 0;
     this.productsService.product.description = '';
     this.productsService.product.stars = undefined;
     this.productsService.product.image = '';

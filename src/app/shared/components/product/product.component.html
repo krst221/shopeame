@@ -1,7 +1,7 @@
 <div class="c-product">
   <img src="{{product.image}}" alt="">
   <h3>{{product.name}}</h3>
-  <h2 *ngIf="product.price != ''">{{product.price}} €</h2>
+  <h2 *ngIf="product.price != 0">{{product.price}} €</h2>
   <p>{{product.description}}</p>
   <div class="c-product--edit" *ngIf="product.stars != -1">
     <ngb-rating *ngIf="product.stars != undefined" [max]="5" [(rate)]="product.stars" [readonly]="true"></ngb-rating>

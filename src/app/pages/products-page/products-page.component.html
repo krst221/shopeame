@@ -2,7 +2,7 @@
   <div class="c-grid--items" *ngFor="let product of products">
     <app-product [product]="product"></app-product>
     <div class="c-grid--buttons">
-      <button (click)="edit(product.id)">Editar</button><button (click)="delete(product.id)">Eliminar</button>
+      <button (click)="edit(product.id)">Editar</button><button (click)="delete(product)">Eliminar</button>
     </div>
   </div>
 </div>
